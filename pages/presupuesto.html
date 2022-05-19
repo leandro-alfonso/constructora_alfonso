@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <h1 class="menu__titulo">constructora los primos</h1>
+            <img src="../img/logo.svg" class="menu__logo">
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="../index.html">inicio</a>
+                </li>
+                <li>
+                    <a href="./nosotros.html">nosotros</a>
+                </li>
+                <li>
+                    <a href="./trabajos.html">trabajos</a>
+                </li>
+                <li>
+                    <a href="./presupuesto.html">presupuesto</a>
+                </li>
+                <li>
+                    <a href="./contacto.html">contacto</a>
+                </li>
+
+            </ul>
+        </nav>  
+    </header>
+    <main>
+        <div class="presupuesto">
+            <h2 class="presupuesto__titulo">presupuesto</h2>
+        </div>   
+        <div>
+            <form class="form">
+                <select name="presupuesto">
+                    <option value="casa">casa</option>
+                    <option value="edificio">edificio</option>
+                    <option value="local comercial">local comercial</option>
+                    <option value="otros">otros</option>
+                </select>
+                <div>
+                    llave en mano
+                </div>
+                <input type="radio" name="contrato" value="llave"/>
+                <div>
+                    obra
+                </div>
+                <div>
+                    <input type="radio" name="contrato" value="obra"><br>
+        
+                    <label for="nombre">nombre:</label>
+                    <input type="text" name="nombre">
+            
+                    <label for="email">email</label>
+                    <input type="email" name="email">
+            
+                    <label for="tel">telefono</label>
+                    <input type="tel" name="tel">
+            
+                    <input type="submit" value="enviar">
+                    <input type="reset" value="reset">
+                </div>           
+            </form>
+        </div>    
+    </main>
+    
+    <footer>
+        <p>copyright 2022</p>
+    </footer>
+</body>
+</html>

@@ -17,7 +17,7 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: dimgray;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .menu {
@@ -53,32 +53,40 @@ a {
     font-family: 'Oswald', sans-serif;
     color: #000000;
 }
+a:hover {
+    color:tomato;
+    border-bottom: solid 1px tomato;
+}
 /* fin de navegador*/
 
 /* main */
 main {
     margin-bottom: 2rem;
 }
-
 .cotizar {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90px;
+    height: 110px;
     width: 100%;
     background-color: aqua;
     border: solid 1px #808080;
 }
-
 .cotizar__subtitulo {
     font-size: 3em;
     text-align: center;
+    font-family:'Montserrat', sans-serif;
 }
-
 .cotizar__parrafo{
     font-size: 2em;
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.cotizar__nosotros {
+    margin: 1rem;
+    text-align: center;
+    font-size: 2em;
     font-family: Arial, Helvetica, sans-serif;
 }
 .cotizar__presupuesto {
@@ -89,10 +97,8 @@ main {
     height: 600px;
     background-size: cover;
     background-position: center bottom;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
-
 .logo {
     width: 100px;
     height: 100px;
@@ -104,7 +110,6 @@ main {
     height: 400px;
     width: 100;   
 }
-
 .contacto__contenedor {
     height: 100%;
     width: 60%;
@@ -112,14 +117,22 @@ main {
     align-items: center;
     justify-content: space-around;
 }
-
-
-h2 {
+.fondo__titulo {
     font-size: 3.2rem;
     font-family: 'Roboto', sans-serif;
 }
+.contactos__titulo {
+    font-size: 3.2rem;
+    font-family: 'Roboto', sans-serif;
+}
+.contactos__div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    border: solid 1px #000000;
+}
 /*fin main*/
-
 /*inicio footer*/
 footer {
     font-size: 1.5em;
@@ -127,6 +140,7 @@ footer {
     text-align: center;
 }
 /*fin footer*/
+
 /*inicio pagina contacto*/
 .contacto__fondo {
     background-image: url(../img/fondocontacto.jpg);
@@ -136,9 +150,12 @@ footer {
 .contacto__titulo {
     text-align: center;
     font-size: 5em;
+    font-family: 'Roboto', sans-serif;
 }
 .contacto__subtitulo {
     text-align: center;
+    font-size: 1.8em;
+    font-family:'Montserrat', sans-serif;
 }
 .contacto__sections {
     display: flex;
@@ -149,32 +166,114 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-}
-.contacto__form label {
     font-size: 2em;
+    border: solid 1px;
+    padding: 1rem;
 }
 .contacto__parrafo {
     font-size: 1.6rem;
     font-family: Arial, Helvetica, sans-serif;
 }
+.contacto__datos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    border: solid 1px;
+    padding: 1rem;
+}
+.contacto__sub {
+    font-size: 2em;
+    font-family:'Montserrat', sans-serif;
+}
 /*fin pagina contacto*/
-
 /*inicio presupuesto*/
-.presupuesto {
+.presupuesto__section {
     background-image: url(../img/presupuesto.png);
-    height: 500px;
+    height: 600px;
     margin-bottom: 2rem;
+    background-size: cover;
+    background-repeat: round;
 }
 .presupuesto__titulo {
     text-align: right;
     font-size: 4em;
-    font-family:'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+.presupuesto__parrafo {
+    text-align: center;
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.contenedor__div {
+    margin-bottom: 2rem;
+}
+.presupuesto__radio {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.presupuesto {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 5rem;
+    padding: 0.5rem;
+    width: 50%;
+    gap: 1rem;
+    border: solid 1px #808080;
+    font-size: 2em;
+}
+.presupuesto__info {
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
 }
 /*fin presupuesto*/
+/*inicio nosotros*/
+.nosotros__body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+.main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5rem;
+}
 
+.nosotros__img{
+    height: 400px;
+}
+
+.nosotros__div {
+    width: 70%;
+}
+.nosotros__articulo {
+    margin-bottom: 2rem;
+    width: 80%;
+}
+
+.nosotros__titulo {
+    font-family: 'Roboto', sans-serif;
+    font-size: 4em;
+}
+
+.nosotros__parrafo {
+    font-size: 1.6em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*fin nosotros*/
 /*inicio trabajos*/
 picture img {
     width: 100%;
@@ -234,7 +333,7 @@ picture img {
 .trabajos__titulo {
     text-align: center;
     font-size: 4em;
-    font-family:'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .trabajos__parrafo {
@@ -245,64 +344,625 @@ picture img {
     font-family: Arial, Helvetica, sans-serif;
 }
 /*fin trabajos*/
-/*inicio nosotros*/
-.nosotros__body {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
-}
-.main {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 5%;
-}
-
-.nosotros__img{
-    height: 400px;
-}
-
-.nosotros__div {
-    width: 70%;
-}
-.nosotros__articulo {
-    margin-bottom: 2rem;
-    width: 70%;
-}
-
-.nosotros__titulo {
-    font-family:'Montserrat', sans-serif;
-    font-size: 4em;
-    margin-left: 2rem;
-}
-
-.nosotros__parrafo {
-    font-size: 1.6em;
-    margin-left: 2rem;
-    font-family: Arial, Helvetica, sans-serif;
-}
-/*fin nosotros*/
 
 @media screen and (max-width:1024px) {
+    /*inicio index*/
+    .fondo {
+        background-image: url(../img/fondocascos.jpg);
+        height: 500px;
+       background-position: center bottom;
+    }
+    .fondo__titulo {
+        text-align: center;
+        font-size: 3em;
+        font-family: 'Roboto', sans-serif;
+    }
     .contacto__contenedor {
         height: 100%;
         width: 100%;
         display: flex;
         flex-direction: row;
     }
-}
-
-@media screen and (max-width: 768px) {
-    .fondo {
-        background-image: url(../img/fondocascos.jpg);
-        height: 450px;
-       background-position: center bottom;
+    /*fin index*/
+    /*inicio trabajos*/
+    .trabajos {
+        background-image: url(../img/trabajo.jpg);
+        background-size: cover;
+        background-position: center bottom;
+        height: 500px;
+        margin-bottom: 2rem;
     }
-
+    .trabajos__titulo {
+        text-align: center;
+        font-size: 3em;
+        font-family:'Montserrat', sans-serif;
+    }
+    .trabajos__parrafo {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        font-size: 1.8em;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    /*fin trabajos*/
+    /*inicio contacto*/
+.contacto__fondo {
+    background-image: url(../img/fondocontacto.jpg);
+    background-size: cover;
+    height: 550px;
+}
+.contacto__sections {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+.contacto__titulo {
+    text-align: center;
+    font-size: 4em;
+    font-family: 'Roboto', sans-serif;
+}
+.contacto__form{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    font-size: 2em;
+    border: solid 1px;
+    padding: 1rem;
+}
+.contacto__datos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    border: solid 1px;
+    padding: 1rem;
+    }
+    /*fin contacto*/
+    /*inicio presupuesto*/
+    .presupuesto__info {
+    width: 50%;
+    }
+    .presupuesto__section {
+    height: 440px;
+    }
+    .presupuesto__titulo {
+    font-size: 3.3em;
+    }
+    .presupuesto__radio {
+    gap: 1rem;
+    }      
+    /*fin presupuesto*/
+    /*inicio nosotros*/
+    .main {
+        gap: 2rem;
+    }
+    .nosotros__div {
+        height: 40%;
+    }
+    .nosotros__img {
+        height: 100%;
+    }
+    .nosotros__titulo {       
+    font-size: 2.5em;
+    }
+    .nosotros__parrafo {
+        font-size: 1.5em;
+    }
+    .nosotros__articulo {
+        width: 80%;
+    }
+    /*fin nosotros*/
+}
+@media screen and (max-width: 768px) {
+    /*inicio index*/
     .contacto__contenedor {
         height: 100%;
         width: 100%;
         display: flex;
         flex-direction: column;
     }
+    .fondo {
+        background-image: url(../img/fondocascos.jpg);
+        height: 380px;
+       background-position: center bottom;
+    }
+    .fondo__titulo {
+        font-size: 2.5em;
+        font-family: 'Roboto', sans-serif;
+    }
+    /*fin index*/
+    /*inicio trabajos*/
+    .main__trabajos {
+        margin: 0 auto;
+        max-width: 600px;
+    }
+    .trabajos {
+        background-image: url(../img/trabajo.jpg);
+        background-size: cover;
+        background-position: center bottom;
+        height: 400px;
+        margin-bottom: 2rem;
+    }
+    .trabajos__titulo {
+        text-align: center;
+        font-size: 2.7em;
+        font-family:'Montserrat', sans-serif;
+    }
+    .trabajos__img {
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 20px;
+    }
+    .trabajos__picture:nth-of-type(1) {
+        grid-column: 1 / 6;
+    }
+    .trabajos__picture:nth-of-type(2) {
+        grid-column: 6 / 10;
+    }
+    .trabajos__picture:nth-of-type(3) {
+        grid-column: 1 / 6;
+        grid-row: 2;
+    }
+    .trabajos__picture:nth-of-type(4) {
+        grid-column: 6 / 10;
+        grid-row: 2;
+    }
+    .trabajos__picture:nth-of-type(5) {
+        grid-column: 1 / 6;
+        grid-row: 3;
+    }
+    .trabajos__picture:nth-of-type(6) {
+        grid-column: 6 / 10;
+        grid-row: 3;
+    }
+    .trabajos__picture:nth-of-type(7) {
+        grid-column: 1 / 6;
+        grid-row: 4;
+    }
+    .trabajos__picture:nth-of-type(8) {
+        grid-column: 6 / 10;
+        grid-row: 4;
+    }
+    .trabajos__picture:nth-of-type(9) {
+        grid-column: 4 / 8;
+        grid-row: 5;
+    }
+    .trabajos__parrafo {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        font-size: 1.5em;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    /*fin trabajos*/
+    /*inicio contacto*/
+.contacto__fondo {
+    background-image: url(../img/fondocontacto.jpg);
+    background-size: cover;
+    height: 380px;
+    }
+    .contacto__titulo {
+    text-align: center;
+    font-size: 3em;
+    font-family: 'Roboto', sans-serif;
+    }  
+    .contacto__sections {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    .contacto__form{
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        font-size: 2em;
+        border: solid 1px;
+        padding: 1rem;
+    }
+    .contacto__datos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+        border: solid 1px;
+        padding: 1rem;
+    }
+    /*fin contacto*/
+    /*inicio presupuesto*/
+    nav {
+        width: 60%;
+    }
+    .presupuesto__section {
+            height: 330px;
+    }
+    .presupuesto__titulo {
+        font-size: 2.7em;
+    }
+    .presupuesto__radio {
+        width: 50%;
+        gap: 0.6rem;
+    }
+    .presupuesto__parrafo {
+        font-size: 1.7em;
+    }
+    /*fin presupuesto*/
+    /*inicio nosotros*/
+    .nosotros__div {
+        height: 30%;
+    }
+    .nosotros__titulo {
+        font-size: 2em;
+    }
+    .nosotros__parrafo {
+        font-size: 1.4em;
+    }
+    .nosotros__articulo {
+        width: 100%;
+    }
+    /*fin nosotros*/
+}
+@media screen and (max-width: 600px) {
+     /*inicio index*/
+     header {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 2rem;
+        align-items: center;
+        background-color: dimgray;
+        margin-bottom: 1rem;
+    }
+    ul {
+        display: flex;
+        gap: 0.5rem;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .menu {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    }
+    .fondo {
+        background-image: url(../img/fondocascos.jpg);
+        height: 300px;
+       background-position: center bottom;
+       margin-top: 1rem;
+    } 
+    /*fin index*/
+    /*inicio trabajos*/
+    .trabajos {
+        background-image: url(../img/trabajo.jpg);
+        background-size: cover;
+        background-position: center bottom;
+        height: 300px;
+        margin-bottom: 2rem;
+    }
+    /*fin trabajos*/
+    /*inicio contacto*/
+    .contacto__fondo {
+        background-image: url(../img/fondocontacto.jpg);
+        background-size: cover;
+        height: 290px;
+    }
+    .contacto__titulo {
+        text-align: center;
+        font-size: 2.8em;
+        font-family: 'Roboto', sans-serif;
+    }  
+    .contacto__sections {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .contacto__form{
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        font-size: 2em;
+        border: solid 1px;
+        padding: 1rem;
+    }
+    .contacto__datos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+        border: solid 1px;
+        padding: 1rem;
+    }
+    /*fin contacto*/
+    /*inicio presupuesto*/
+    header { 
+        flex-direction: column;
+    }
+    .presupuesto__section {
+        height: 260px;
+    }
+    .presupuesto__radio {
+        width: 50%;
+        gap: 0.5rem;
+    }
+    .form {
+        font-size: 1.6em;
+    }
+    .presupuesto__info {
+        width: 60%;
+    }
+    .presupuesto__parrafo {
+        font-size: 1.5em;
+    }
+    /*fin presupuesto*/
+    /*inicio nosotros*/
+    .main {
+        display: flex;
+        flex-direction: column;
+    }
+    .nosotros__img {
+        width: 100%;
+    }
+    /*fin nosotros*/
+}
+@media screen and (max-width: 480px) {
+    /*inicio index*/
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: dimgray;
+        margin-bottom: 0.8rem;
+    }
+    .fondo {
+        background-image: url(../img/fondocascos.jpg);
+        height: 250px;
+       background-position: center bottom;
+       margin-top: 0rem;
+    }  
+    .contenedor__cotizar {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 0.8rem;
+    }
+    .fondo__titulo {
+        font-size: 2em;
+        font-family: 'Roboto', sans-serif;
+    }
+    .contactos__titulo {
+        margin-bottom: 2rem;
+        font-size: 2em;
+        font-family: 'Roboto', sans-serif;
+    }
+    .contacto__parrafo {
+        font-size: 1.2em;
+        font-family: Arial, Helvetica, sans-serif;
+    } 
+    .cotizar__subtitulo {
+        font-size: 1.7em;
+        text-align: center;
+    }
+    .cotizar__parrafo{
+        font-size: 1.4em;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .cotizar__nosotros {
+        margin: 0.4rem;
+        text-align: center;
+        font-size: 1.6em;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .cotizar__presupuesto {
+        font-size: 1.3em;
+    }
+    /*fin index*/   
+    /*inicio trabajos*/
+    .main__trabajos {
+        margin: 0 auto;
+        max-width: 300px;
+    }
+    .trabajos {
+        background-image: url(../img/trabajo.jpg);
+        background-size: cover;
+        background-position: center bottom;
+        height: 250px;
+        margin-bottom: 2rem;
+    }
+    .trabajos__titulo {
+        text-align: center;
+        font-size: 2.4em;
+        font-family:'Montserrat', sans-serif;
+    }
+    .trabajos__img {
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: repeat(9, 1fr);
+        gap: 20px;
+    }
+    .trabajos__picture:nth-of-type(1) {
+        grid-column: 1 / 10;
+    }
+    .trabajos__picture:nth-of-type(2) {
+        grid-column: 1 / 10;
+        grid-row: 2;
+    }
+    .trabajos__picture:nth-of-type(3) {
+        grid-column: 1 / 10;
+        grid-row: 3;
+    }
+    .trabajos__picture:nth-of-type(4) {
+        grid-column: 1 / 10;
+        grid-row: 4;
+    }
+    .trabajos__picture:nth-of-type(5) {
+        grid-column: 1 / 10;
+        grid-row: 5;
+    }
+    .trabajos__picture:nth-of-type(6) {
+        grid-column: 1 / 10;
+        grid-row: 6;
+    }
+    .trabajos__picture:nth-of-type(7) {
+        grid-column: 1 / 10;
+        grid-row: 7;
+    }
+    .trabajos__picture:nth-of-type(8) {
+        grid-column: 1 / 10;
+        grid-row: 8;
+    }
+    .trabajos__picture:nth-of-type(9) {
+        grid-column: 1 / 10;
+        grid-row: 9;
+    }
+    .trabajos__parrafo {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        font-size: 1.3em;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    /*fin trabajos*/
+    /*inicio contacto*/
+    .contacto__fondo {
+        background-image: url(../img/fondocontacto.jpg);
+        background-size: cover;
+        height: 240px;
+    } 
+    .contacto__titulo {
+        text-align: center;
+        font-size: 2.5em;
+        font-family: 'Roboto', sans-serif;
+    }  
+    .contacto__subtitulo {
+        text-align: center;
+        font-size: 1.4em;
+        font-family:'Montserrat', sans-serif;
+    }
+    .contacto__sections {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    .contacto__form{
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        font-size: 2em;
+        border: solid 1px;
+        padding: 1rem;
+    }
+    .contacto__datos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+        border: solid 1px;
+        padding: 1rem;
+    }
+    /*fin contacto*/
+    /*inicio presupuesto*/
+    .presupuesto__section {
+        height: 200px;
+    }
+    .presupuesto__titulo {
+        font-size: 2em;
+    }
+    .presupuesto__parrafo {
+        font-size: 1.3em;
+    }
+    .form {
+        font-size: 1.3em;
+        gap: 2rem;
+        padding: 2rem;
+    }
+    .presupuesto__radio {
+        width: 50%;
+        gap: 0.5rem;
+    }
+    .presupuesto__info {
+        gap: 0.5rem;
+        width: 60%;
+    }
+    .presupuesto__main {
+        min-height: 80vh;
+    }
+    /*inicio nosotros*/
+    .main {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .nosotros__div {
+        width: 100%;
+        margin-bottom: 2rem;
+
+    }
+    .nosotros__img {
+        width: 100%;
+    }
+    .nosotros__titulo {
+        font-size: 1.5em;
+    }
+    .nosotros__articulo {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    /*fin nosotros*/
+}
+
+@media screen and (max-width: 320px) {
+    /*inicio index*/
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: dimgray;
+        margin-bottom: 0.8rem;
+    }
+    .fondo {
+        background-image: url(../img/fondocascos.jpg);
+        height: 230px;
+       background-position: center bottom;
+       margin-top: 0rem;
+    }  
+    .cotizar__subtitulo {
+        font-size: 1.7em;
+        text-align: center;
+    }
+    .cotizar__parrafo{
+        font-size: 1.4em;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .cotizar__presupuesto {
+        font-size: 1.3em;
+    }
+    /*fin index*/
+    /*inicio trabajos*/
+    .trabajos {
+        background-image: url(../img/trabajo.jpg);
+        background-size: cover;
+        background-position: center bottom;
+        height: 170px;
+        margin-bottom: 2rem;
+    }
+    /*fin trabajos*/
+    .contacto__fondo {
+        background-image: url(../img/fondocontacto.jpg);
+        background-size: cover;
+        height: 240px;
+    }
+    .contacto__titulo {
+        text-align: center;
+        font-size: 2em;
+        font-family: 'Roboto', sans-serif;
+    }
+    /*fin contacto*/
+
 }

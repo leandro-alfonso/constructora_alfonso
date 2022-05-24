@@ -35,28 +35,32 @@
             </ul>
         </nav>  
     </header>
-    <main>
-        <div class="presupuesto">
+    <main class="presupuesto__main">
+        <section class="presupuesto__section">
             <h2 class="presupuesto__titulo">presupuesto</h2>
-        </div>   
-        <div>
+        </section>  
+        <div class="contenedor__div">
+            <p class="presupuesto__parrafo">Selecciona el tipo de presupuesto que necesites y nos estaremos comunicando con vs en 48hs.</p>
+        </div>
+        <section class="presupuesto">
             <form class="form">
-                <select name="presupuesto">
-                    <option value="casa">casa</option>
-                    <option value="edificio">edificio</option>
-                    <option value="local comercial">local comercial</option>
-                    <option value="otros">otros</option>
-                </select>
-                <div>
-                    llave en mano
+                <div class="presupuesto__radio">
+                    <select name="presupuesto">
+                        <option value="casa">casa</option>
+                        <option value="edificio">edificio</option>
+                        <option value="local comercial">local comercial</option>
+                        <option value="otros">otros</option>
+                    </select>
+                    <div>
+                        llave en mano
+                    </div>
+                    <input type="radio" name="contrato" value="llave"/>
+                    <div>
+                        obra
+                    </div>
+                    <input type="radio" name="contrato" value="obra">
                 </div>
-                <input type="radio" name="contrato" value="llave"/>
-                <div>
-                    obra
-                </div>
-                <div>
-                    <input type="radio" name="contrato" value="obra"><br>
-        
+                <div class="presupuesto__info">
                     <label for="nombre">nombre:</label>
                     <input type="text" name="nombre">
             
@@ -65,12 +69,13 @@
             
                     <label for="tel">telefono</label>
                     <input type="tel" name="tel">
-            
+                    
                     <input type="submit" value="enviar">
                     <input type="reset" value="reset">
                 </div>           
             </form>
-        </div>    
+        </section> 
+      
     </main>
     
     <footer>

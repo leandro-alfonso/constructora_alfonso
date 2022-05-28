@@ -28,6 +28,7 @@ header {
 
 .menu__titulo {
     font-size: 2em;
+    color: #ffffff;
 }
 .menu__logo {
     height: 50px;
@@ -51,11 +52,12 @@ li {
 a {
     text-decoration: none;
     font-family: 'Oswald', sans-serif;
-    color: #000000;
+    color: #ffffff;
 }
 a:hover {
     color:tomato;
     border-bottom: solid 1px tomato;
+    transition: all .3s ease-in-out;
 }
 /* fin de navegador*/
 
@@ -72,6 +74,7 @@ main {
     width: 100%;
     background-color: aqua;
     border: solid 1px #808080;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
 }
 .cotizar__subtitulo {
     font-size: 3em;
@@ -89,8 +92,30 @@ main {
     font-size: 2em;
     font-family: Arial, Helvetica, sans-serif;
 }
+.cotizar__seccion {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+.cotizar__article {
+    width: 350px;
+}
+.cotizar__h3 {
+    text-align: center;
+    font-size: 2em;
+    font-family:'Montserrat', sans-serif;
+}
+.cotizar__img {
+    border-radius: 100px;
+}
 .cotizar__presupuesto {
     font-size: 2em;
+    color: #000000;
+    border: solid 1px;
+    padding: 0.2rem;
+}
+.cotizar__presupuesto:hover {
+    color: aliceblue;
 }
 .fondo {
     background-image: url(../img/fondocascos.jpg);
@@ -255,7 +280,6 @@ footer {
 .nosotros__img{
     height: 400px;
 }
-
 .nosotros__div {
     width: 70%;
 }
@@ -334,6 +358,7 @@ picture img {
     text-align: center;
     font-size: 4em;
     font-family: 'Roboto', sans-serif;
+
 }
 
 .trabajos__parrafo {
@@ -344,6 +369,7 @@ picture img {
     font-family: Arial, Helvetica, sans-serif;
 }
 /*fin trabajos*/
+/*inicio media querys*/
 
 @media screen and (max-width:1024px) {
     /*inicio index*/
@@ -469,6 +495,19 @@ picture img {
     .fondo__titulo {
         font-size: 2.5em;
         font-family: 'Roboto', sans-serif;
+    }
+    .cotizar__img {
+        width: 240px;
+        height: 210px;
+    }
+    .cotizar__nosotros {
+        font-size: 1.7em;
+    }
+    .cotizar__article {
+        width: 50%;
+    }
+    .cotizar__subtitulo {
+        font-size: 2.5em;
     }
     /*fin index*/
     /*inicio trabajos*/
@@ -632,6 +671,16 @@ picture img {
        background-position: center bottom;
        margin-top: 1rem;
     } 
+    .cotizar__subtitulo {
+        font-size: 2em;
+    }
+    .cotizar__seccion {
+        flex-direction: column;
+        align-items: center;
+    }
+    .cotizar__article {
+        width: 100%;
+    }
     /*fin index*/
     /*inicio trabajos*/
     .trabajos {
@@ -757,7 +806,20 @@ picture img {
         font-family: Arial, Helvetica, sans-serif;
     }
     .cotizar__presupuesto {
-        font-size: 1.3em;
+        font-size: 1.5em;
+    }
+    .cotizar__seccion {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .cotizar__article {
+        width: 90%;
+        border: solid 1px;
+    }
+    .cotizar__img {
+        width: 180px;
+        height: 110px;
     }
     /*fin index*/   
     /*inicio trabajos*/
@@ -914,7 +976,6 @@ picture img {
     }
     /*fin nosotros*/
 }
-
 @media screen and (max-width: 320px) {
     /*inicio index*/
     header {
@@ -943,6 +1004,16 @@ picture img {
     .cotizar__presupuesto {
         font-size: 1.3em;
     }
+    .cotizar__article {
+        width: 85%;
+    }
+    .cotizar__nosotros {
+        font-size: 1.2em;
+    }
+    .cotizar__img {
+        width: 160px;
+        height: 130px;
+    }
     /*fin index*/
     /*inicio trabajos*/
     .trabajos {
@@ -966,3 +1037,4 @@ picture img {
     /*fin contacto*/
 
 }
+/*fin media querys*/

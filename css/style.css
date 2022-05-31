@@ -11,13 +11,9 @@ html {
     font-size: 62.5%;
 }
 /*inicio navegador*/
-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: dimgray;
-    margin-bottom: 1rem;
+
+.menu__responsive nav {
+    width: 100%;
 }
 
 .menu {
@@ -28,20 +24,17 @@ header {
 
 .menu__titulo {
     font-size: 2em;
-    color: #ffffff;
+    color: #000000;
 }
 .menu__logo {
     height: 50px;
 }
 
-nav {
-    width: 50%;
-}
-
 ul {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    gap: 1rem;
+    width: 100%;
+    justify-content: flex-end;
 }
 
 li {
@@ -49,13 +42,12 @@ li {
     font-size: 2em;
 }
 
-a {
+.nav-item a {
     text-decoration: none;
     font-family: 'Oswald', sans-serif;
-    color: #ffffff;
+    color: #000000;
 }
-a:hover {
-    color:tomato;
+.nav-item a:hover {
     border-bottom: solid 1px tomato;
     transition: all .3s ease-in-out;
 }
@@ -64,13 +56,14 @@ a:hover {
 /* main */
 main {
     margin-bottom: 2rem;
+    margin-top: 1rem;
 }
 .cotizar {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 110px;
+   height: 100%;
     width: 100%;
     background-color: aqua;
     border: solid 1px #808080;
@@ -113,6 +106,7 @@ main {
     color: #000000;
     border: solid 1px;
     padding: 0.2rem;
+    text-decoration: none;
 }
 .cotizar__presupuesto:hover {
     color: aliceblue;
@@ -275,11 +269,19 @@ footer {
     flex-direction: row;
     align-items: center;
     gap: 5rem;
+    justify-content: space-evenly;
 }
-
+.carousel {
+    width: 30%;
+}
+.nosotros {
+    width: 50%;
+}
+/*
 .nosotros__img{
     height: 400px;
 }
+*/
 .nosotros__div {
     width: 70%;
 }
@@ -462,6 +464,9 @@ picture img {
     .main {
         gap: 2rem;
     }
+    .carousel {
+        width: 40%;
+    }
     .nosotros__div {
         height: 40%;
     }
@@ -481,6 +486,10 @@ picture img {
 }
 @media screen and (max-width: 768px) {
     /*inicio index*/
+    .menu__titulo {
+        font-size: 1.7em;
+        color: #0c0b0b;
+    }
     .contacto__contenedor {
         height: 100%;
         width: 100%;
@@ -629,6 +638,13 @@ picture img {
     }
     /*fin presupuesto*/
     /*inicio nosotros*/
+    .nosotros {
+        width: 100%;
+        height: 80%;
+    }
+    .carousel {
+        width: 80%;
+    }
     .nosotros__div {
         height: 30%;
     }
@@ -645,14 +661,13 @@ picture img {
 }
 @media screen and (max-width: 600px) {
      /*inicio index*/
-     header {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        gap: 2rem;
-        align-items: center;
-        background-color: dimgray;
-        margin-bottom: 1rem;
+     .menu__titulo {
+        font-size: 1.5em;
+    }
+    .menu {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
     }
     ul {
         display: flex;
@@ -758,13 +773,8 @@ picture img {
 }
 @media screen and (max-width: 480px) {
     /*inicio index*/
-    header {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        background-color: dimgray;
-        margin-bottom: 0.8rem;
+    .menu__titulo{
+        font-size: 1.3em;
     }
     .fondo {
         background-image: url(../img/fondocascos.jpg);
@@ -958,6 +968,12 @@ picture img {
         flex-direction: column;
         align-items: stretch;
     }
+    .nosotros {
+        padding: 1rem;
+    }
+    .carousel {
+        width: 100%;
+    }
     .nosotros__div {
         width: 100%;
         margin-bottom: 2rem;
@@ -978,13 +994,8 @@ picture img {
 }
 @media screen and (max-width: 320px) {
     /*inicio index*/
-    header {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        background-color: dimgray;
-        margin-bottom: 0.8rem;
+    .menu__titulo {
+        font-size: 1em;
     }
     .fondo {
         background-image: url(../img/fondocascos.jpg);

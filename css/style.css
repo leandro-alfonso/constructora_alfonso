@@ -30,6 +30,7 @@ html {
     height: 50px;
 }
 
+
 ul {
     display: flex;
     gap: 1rem;
@@ -144,6 +145,11 @@ main {
     font-size: 3.2rem;
     font-family: 'Roboto', sans-serif;
 }
+.contacto__redes {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0rem;
+}
 .contactos__div {
     display: flex;
     flex-direction: column;
@@ -157,6 +163,9 @@ footer {
     font-size: 1.5em;
     background-color: coral;
     text-align: center;
+}
+.footer__parrafo {
+    margin-bottom: 0rem;
 }
 /*fin footer*/
 
@@ -213,6 +222,9 @@ footer {
     margin-bottom: 2rem;
     background-size: cover;
     background-repeat: round;
+}
+.button__presupuesto {
+    font-size: 1em;
 }
 .presupuesto__titulo {
     text-align: right;
@@ -310,6 +322,7 @@ picture img {
     background-size: cover;
     background-position: center bottom;
     height: 600px;
+    margin-top: 1rem;
     margin-bottom: 2rem;
 }
 .main__trabajos {
@@ -365,7 +378,7 @@ picture img {
 
 .trabajos__parrafo {
     margin-top: 2rem;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     text-align: center;
     font-size: 2em;
     font-family: Arial, Helvetica, sans-serif;
@@ -949,11 +962,12 @@ picture img {
     }
     .form {
         font-size: 1.3em;
+        width: 90%;
         gap: 2rem;
         padding: 2rem;
     }
     .presupuesto__radio {
-        width: 50%;
+        width: 60%;
         gap: 0.5rem;
     }
     .presupuesto__info {
@@ -1035,6 +1049,7 @@ picture img {
         margin-bottom: 2rem;
     }
     /*fin trabajos*/
+    /*inicio contacto*/
     .contacto__fondo {
         background-image: url(../img/fondocontacto.jpg);
         background-size: cover;
@@ -1046,6 +1061,10 @@ picture img {
         font-family: 'Roboto', sans-serif;
     }
     /*fin contacto*/
+    /*incio presupuesto*/
+    .presupuesto__radio {
+        width: 100%;
+    }
 
 }
 /*fin media querys*/

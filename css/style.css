@@ -124,20 +124,26 @@ main {
     height: 100px;
 } 
 .contactos {
-    background-image: url(../img/alic-contacto.jpg);
+    background-image: url(../img/fondogris.jpg);
     background-size: cover;
     background-position: center;
     height: 400px;
-    width: 100;   
+    width: 100%;   
 }
 .contacto__contenedor {
     height: 100%;
-    width: 60%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
+.fondo__article {
+    display: flex;
+    justify-content: space-around;
+}
 .fondo__titulo {
+    background-color: #ffffff9e;
+    border-radius: 15px;
     font-size: 3.2rem;
     font-family: 'Roboto', sans-serif;
 }
@@ -160,12 +166,33 @@ main {
 /*fin main*/
 /*inicio footer*/
 footer {
+    display: flex;
     font-size: 1.5em;
     background-color: coral;
-    text-align: center;
+    justify-content: space-around;
+}
+.section__footer {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+}
+.div__footer {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+.logo__footer {
+    width: 50px;
+    height: 50px;
 }
 .footer__parrafo {
     margin-bottom: 0rem;
+}
+.footer__redes {
+    display: flex;
+    width: 20%;
+    justify-content: space-around;
+    padding-left: 0rem;
 }
 /*fin footer*/
 
@@ -179,6 +206,8 @@ footer {
     text-align: center;
     font-size: 5em;
     font-family: 'Roboto', sans-serif;
+    background-color: #ffffff9e;
+    border-radius: 15px;
 }
 .contacto__subtitulo {
     text-align: center;
@@ -230,6 +259,8 @@ footer {
     text-align: right;
     font-size: 4em;
     font-family: 'Roboto', sans-serif;
+    background-color: #ffffff9e;
+    border-radius: 15px;
 }
 .presupuesto__parrafo {
     text-align: center;
@@ -373,6 +404,8 @@ picture img {
     text-align: center;
     font-size: 4em;
     font-family: 'Roboto', sans-serif;
+    background-color: #ffffff9e;
+    border-radius: 15px;
 
 }
 
@@ -405,6 +438,12 @@ picture img {
         flex-direction: row;
     }
     /*fin index*/
+    /*footer*/
+    .section__footer {
+        justify-content: space-between;
+        width: 100%;
+    }
+    /*fin footer*/ 
     /*inicio trabajos*/
     .trabajos {
         background-image: url(../img/trabajo.jpg);
@@ -532,6 +571,22 @@ picture img {
         font-size: 2.5em;
     }
     /*fin index*/
+    /*inicio footer*/
+    .section__footer {
+        flex-direction: column;
+        align-items: center;
+    }
+    footer {
+        font-size: 1.2em;
+    }
+    .div__footer {
+        flex-direction: column;
+        gap: 0rem;
+    }
+    .footer__redes {
+        width: 50%;
+    }
+    /*fin footer*/
     /*inicio trabajos*/
     .main__trabajos {
         margin: 0 auto;
@@ -710,6 +765,9 @@ picture img {
         width: 100%;
     }
     /*fin index*/
+    /*inicio footer*/
+
+    /*fin footer*/
     /*inicio trabajos*/
     .trabajos {
         background-image: url(../img/trabajo.jpg);
@@ -844,7 +902,15 @@ picture img {
         width: 180px;
         height: 110px;
     }
-    /*fin index*/   
+    /*fin index*/ 
+    /*inicio footer*/
+    .footer__parrafo {
+        font-size: 0.8em;
+    }
+    .img__footer {
+        width: 20px;
+    }
+    /*fin footer*/  
     /*inicio trabajos*/
     .main__trabajos {
         margin: 0 auto;

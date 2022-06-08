@@ -1,17 +1,54 @@
+
+/*
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Oswald:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Oswald:wght@300&family=Roboto:ital@1&display=swap');
+/*
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&family=Open+Sans:wght@300&family=Oswald:wght@300&family=Roboto:ital@1&display=swap');
+*/
+/*
+:root {
+
+    /*color*/
+    /*
+    --footer: #ff7f50; 
+    */
+
+    /*font-family*/
+    /*
+    --font-titulo:'Roboto', sans-serif;
+    *//*
+    --font-subtitulo: 'Montserrat', sans-serif;
+    /*
+    --font-parrafo: Arial, Helvetica, sans-serif;
+    /*
+    --font-nav: 'Oswald', sans-serif;
+
+    /*font sizes*/
+    /*
+    --text-titulo: 3.4em;
+    */
+    /*
+    --text-subtitulo: 2.5em;
+    */
+    /*
+    --text-parrafo: 2em;
+    /*
+    --text-small: 1.5em;
+    *//*
+}
 /*inicio reset*/
+/*
 * {
     margin: 0;
     padding: 0;
 }
 /*fin reset*/
+/*
 html {
     font-size: 62.5%;
 }
 /*inicio navegador*/
-
+/*
 .menu__responsive nav {
     width: 100%;
 }
@@ -23,7 +60,7 @@ html {
 }
 
 .menu__titulo {
-    font-size: 2em;
+    font-size: var(--text-parrafo);
     color: #000000;
 }
 .menu__logo {
@@ -40,21 +77,23 @@ ul {
 
 li {
     list-style-type: none;
-    font-size: 2em;
+    font-size: var(--text-parrafo);
 }
 
 .nav-item a {
     text-decoration: none;
-    font-family: 'Oswald', sans-serif;
+    font-family: var(--font-nav);
     color: #000000;
 }
 .nav-item a:hover {
     border-bottom: solid 1px tomato;
     transition: all .3s ease-in-out;
 }
+*/
 /* fin de navegador*/
 
 /* main */
+/*
 main {
     margin-bottom: 2rem;
     margin-top: 1rem;
@@ -64,27 +103,27 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-   height: 100%;
+    height: 100%;
     width: 100%;
     background-color: aqua;
     border: solid 1px #808080;
     background: linear-gradient(to right, #00c6ff, #0072ff);
 }
 .cotizar__subtitulo {
-    font-size: 3em;
+    font-size: var(--text-subtitulo);
     text-align: center;
-    font-family:'Montserrat', sans-serif;
+    font-family: var(--font-subtitulo);
 }
 .cotizar__parrafo{
-    font-size: 2em;
+    font-size: var(--text-parrafo);
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-parrafo);
 }
 .cotizar__nosotros {
     margin: 1rem;
     text-align: center;
-    font-size: 2em;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--text-parrafo);
+    font-family: var(--font-parrafo);
 }
 .cotizar__seccion {
     display: flex;
@@ -96,14 +135,14 @@ main {
 }
 .cotizar__h3 {
     text-align: center;
-    font-size: 2em;
-    font-family:'Montserrat', sans-serif;
+    font-size: var(--text-parrafo);
+    font-family:var(--font-subtitulo);
 }
 .cotizar__img {
     border-radius: 100px;
 }
 .cotizar__presupuesto {
-    font-size: 2em;
+    font-size: var(--text-parrafo);
     color: #000000;
     border: solid 1px;
     padding: 0.2rem;
@@ -144,17 +183,19 @@ main {
 .fondo__titulo {
     background-color: #ffffff9e;
     border-radius: 15px;
-    font-size: 3.2rem;
-    font-family: 'Roboto', sans-serif;
+    font-size: var(--text-titulo);
+    font-family: var(--font-titulo);
 }
 .contactos__titulo {
-    font-size: 3.2rem;
-    font-family: 'Roboto', sans-serif;
+    font-size: var(--text-titulo);
+    font-family: var(--font-titulo);
 }
 .contacto__redes {
     display: flex;
     justify-content: space-between;
     padding-left: 0rem;
+    list-style-type: none;
+    width: 80%;
 }
 .contactos__div {
     display: flex;
@@ -163,25 +204,27 @@ main {
     gap: 2rem;
     border: solid 1px #000000;
 }
+*/
 /*fin main*/
 /*inicio footer*/
+/*
 footer {
     display: flex;
-    font-size: 1.5em;
-    background-color: coral;
+    font-size: var(--text-small);
+    background-color: var(--footer);
     justify-content: space-around;
 }
-.section__footer {
+.footer__section {
     display: flex;
     justify-content: space-around;
     width: 90%;
 }
-.div__footer {
+.footer__div {
     display: flex;
     gap: 2rem;
     align-items: center;
 }
-.logo__footer {
+.footer__logo {
     width: 50px;
     height: 50px;
 }
@@ -197,6 +240,7 @@ footer {
 /*fin footer*/
 
 /*inicio pagina contacto*/
+/*
 .contacto__fondo {
     background-image: url(../img/fondocontacto.jpg);
     background-size: cover;
@@ -204,15 +248,15 @@ footer {
 }
 .contacto__titulo {
     text-align: center;
-    font-size: 5em;
-    font-family: 'Roboto', sans-serif;
+    font-size: var(--text-titulo);
+    font-family: var(--font-titulo);
     background-color: #ffffff9e;
     border-radius: 15px;
 }
 .contacto__subtitulo {
     text-align: center;
-    font-size: 1.8em;
-    font-family:'Montserrat', sans-serif;
+    font-size: var(--text-subtitulo);
+    font-family: var(--font-subtitulo);
 }
 .contacto__sections {
     display: flex;
@@ -223,13 +267,13 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    font-size: 2em;
+    font-size: var(--text-parrafo);
     border: solid 1px;
     padding: 1rem;
 }
 .contacto__parrafo {
-    font-size: 1.6rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--text-small);
+    font-family: var(--font-parrafo);
 }
 .contacto__datos {
     display: flex;
@@ -240,11 +284,13 @@ footer {
     padding: 1rem;
 }
 .contacto__sub {
-    font-size: 2em;
-    font-family:'Montserrat', sans-serif;
+    font-size: var(--text-subtitulo);
+    font-family:var(--font-subtitulo);
 }
+/*
 /*fin pagina contacto*/
 /*inicio presupuesto*/
+/*
 .presupuesto__section {
     background-image: url(../img/presupuesto.png);
     height: 600px;
@@ -257,15 +303,15 @@ footer {
 }
 .presupuesto__titulo {
     text-align: right;
-    font-size: 4em;
-    font-family: 'Roboto', sans-serif;
+    font-size: var(--text-titulo);
+    font-family: var(--font-titulo);
     background-color: #ffffff9e;
     border-radius: 15px;
 }
 .presupuesto__parrafo {
     text-align: center;
-    font-size: 2em;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--text-parrafo);
+    font-family: var(--font-parrafo);
 }
 .contenedor__div {
     margin-bottom: 2rem;
@@ -291,7 +337,7 @@ footer {
     width: 50%;
     gap: 1rem;
     border: solid 1px #808080;
-    font-size: 2em;
+    font-size: var(--text-parrafo);
 }
 .presupuesto__info {
     display: flex;
@@ -300,8 +346,10 @@ footer {
     align-items: stretch;
     gap: 1rem;
 }
+/*
 /*fin presupuesto*/
 /*inicio nosotros*/
+/*
 .nosotros__body {
     display: grid;
     grid-template-rows: auto 1fr auto;
@@ -320,11 +368,7 @@ footer {
 .nosotros {
     width: 50%;
 }
-/*
-.nosotros__img{
-    height: 400px;
-}
-*/
+
 .nosotros__div {
     width: 70%;
 }
@@ -334,16 +378,17 @@ footer {
 }
 
 .nosotros__titulo {
-    font-family: 'Roboto', sans-serif;
-    font-size: 4em;
+    font-family: var(--font-titulo);
+    font-size: var(--font-titulo);
 }
 
 .nosotros__parrafo {
-    font-size: 1.6em;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--text-small);
+    font-family: var(--font-parrafo);
 }
 /*fin nosotros*/
 /*inicio trabajos*/
+/*
 picture img {
     width: 100%;
     height: 100%;
@@ -402,25 +447,26 @@ picture img {
 
 .trabajos__titulo {
     text-align: center;
-    font-size: 4em;
-    font-family: 'Roboto', sans-serif;
+    font-size: var(--text-titulo);
+    font-family: var(--font-titulo);
     background-color: #ffffff9e;
     border-radius: 15px;
-
 }
 
 .trabajos__parrafo {
     margin-top: 2rem;
     margin-bottom: 3rem;
     text-align: center;
-    font-size: 2em;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--text-parrafo);
+    font-family: var(--font-parrafo);
 }
 /*fin trabajos*/
 /*inicio media querys*/
+/*
 
 @media screen and (max-width:1024px) {
     /*inicio index*/
+    /*
     .fondo {
         background-image: url(../img/fondocascos.jpg);
         height: 500px;
@@ -439,12 +485,14 @@ picture img {
     }
     /*fin index*/
     /*footer*/
+    /*
     .section__footer {
         justify-content: space-between;
         width: 100%;
     }
     /*fin footer*/ 
     /*inicio trabajos*/
+    /*
     .trabajos {
         background-image: url(../img/trabajo.jpg);
         background-size: cover;
@@ -466,6 +514,7 @@ picture img {
     }
     /*fin trabajos*/
     /*inicio contacto*/
+    /*
 .contacto__fondo {
     background-image: url(../img/fondocontacto.jpg);
     background-size: cover;
@@ -499,6 +548,7 @@ picture img {
     }
     /*fin contacto*/
     /*inicio presupuesto*/
+    /*
     .presupuesto__info {
     width: 50%;
     }
@@ -513,6 +563,7 @@ picture img {
     }      
     /*fin presupuesto*/
     /*inicio nosotros*/
+    /*
     .main {
         gap: 2rem;
     }
@@ -535,9 +586,11 @@ picture img {
         width: 80%;
     }
     /*fin nosotros*/
+    /*
 }
 @media screen and (max-width: 768px) {
     /*inicio index*/
+    /*
     .menu__titulo {
         font-size: 1.7em;
         color: #0c0b0b;
@@ -572,6 +625,7 @@ picture img {
     }
     /*fin index*/
     /*inicio footer*/
+    /*
     .section__footer {
         flex-direction: column;
         align-items: center;
@@ -588,6 +642,7 @@ picture img {
     }
     /*fin footer*/
     /*inicio trabajos*/
+    /*
     .main__trabajos {
         margin: 0 auto;
         max-width: 600px;
@@ -653,6 +708,7 @@ picture img {
     }
     /*fin trabajos*/
     /*inicio contacto*/
+    /*
 .contacto__fondo {
     background-image: url(../img/fondocontacto.jpg);
     background-size: cover;
@@ -688,6 +744,7 @@ picture img {
     }
     /*fin contacto*/
     /*inicio presupuesto*/
+    /*
     nav {
         width: 60%;
     }
@@ -706,6 +763,7 @@ picture img {
     }
     /*fin presupuesto*/
     /*inicio nosotros*/
+    /*
     .nosotros {
         width: 100%;
         height: 80%;
@@ -726,9 +784,11 @@ picture img {
         width: 100%;
     }
     /*fin nosotros*/
+    /*
 }
 @media screen and (max-width: 600px) {
      /*inicio index*/
+     /*
      .menu__titulo {
         font-size: 1.5em;
     }
@@ -769,6 +829,7 @@ picture img {
 
     /*fin footer*/
     /*inicio trabajos*/
+    /*
     .trabajos {
         background-image: url(../img/trabajo.jpg);
         background-size: cover;
@@ -778,6 +839,7 @@ picture img {
     }
     /*fin trabajos*/
     /*inicio contacto*/
+    /*
     .contacto__fondo {
         background-image: url(../img/fondocontacto.jpg);
         background-size: cover;
@@ -812,6 +874,7 @@ picture img {
     }
     /*fin contacto*/
     /*inicio presupuesto*/
+    /*
     header { 
         flex-direction: column;
     }
@@ -833,6 +896,7 @@ picture img {
     }
     /*fin presupuesto*/
     /*inicio nosotros*/
+    /*
     .main {
         display: flex;
         flex-direction: column;
@@ -841,9 +905,12 @@ picture img {
         width: 100%;
     }
     /*fin nosotros*/
+    /*
 }
+
 @media screen and (max-width: 480px) {
     /*inicio index*/
+    /*
     .menu__titulo{
         font-size: 1.3em;
     }
@@ -904,6 +971,8 @@ picture img {
     }
     /*fin index*/ 
     /*inicio footer*/
+    /*
+    
     .footer__parrafo {
         font-size: 0.8em;
     }
@@ -912,6 +981,7 @@ picture img {
     }
     /*fin footer*/  
     /*inicio trabajos*/
+    /*
     .main__trabajos {
         margin: 0 auto;
         max-width: 300px;
@@ -978,6 +1048,7 @@ picture img {
     }
     /*fin trabajos*/
     /*inicio contacto*/
+    /*
     .contacto__fondo {
         background-image: url(../img/fondocontacto.jpg);
         background-size: cover;
@@ -1015,8 +1086,10 @@ picture img {
         border: solid 1px;
         padding: 1rem;
     }
+    */
     /*fin contacto*/
     /*inicio presupuesto*/
+    /*
     .presupuesto__section {
         height: 200px;
     }
@@ -1043,7 +1116,9 @@ picture img {
     .presupuesto__main {
         min-height: 80vh;
     }
+    
     /*inicio nosotros*/
+    /*
     .main {
         flex-direction: column;
         align-items: stretch;
@@ -1071,9 +1146,12 @@ picture img {
         gap: 2rem;
     }
     /*fin nosotros*/
+    /*
+    
 }
 @media screen and (max-width: 320px) {
     /*inicio index*/
+    /*
     .menu__titulo {
         font-size: 1em;
     }
@@ -1107,6 +1185,7 @@ picture img {
     }
     /*fin index*/
     /*inicio trabajos*/
+    /*
     .trabajos {
         background-image: url(../img/trabajo.jpg);
         background-size: cover;
@@ -1116,6 +1195,7 @@ picture img {
     }
     /*fin trabajos*/
     /*inicio contacto*/
+    /*
     .contacto__fondo {
         background-image: url(../img/fondocontacto.jpg);
         background-size: cover;
@@ -1128,9 +1208,10 @@ picture img {
     }
     /*fin contacto*/
     /*incio presupuesto*/
+    /*
     .presupuesto__radio {
         width: 100%;
     }
-
+    /*fin presupuesto*/
+/*fin media querys*//*
 }
-/*fin media querys*/

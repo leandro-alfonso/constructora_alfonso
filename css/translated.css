@@ -33,7 +33,7 @@ html {
     gap: 1rem;
     width: 100%;
     justify-content: flex-end;
-    font-size: 2em;
+    font-size: 2.5em;
     font-family: "Oswald", sans-serif; }
     .menu__responsive nav ul li {
       list-style-type: none; }
@@ -43,6 +43,10 @@ html {
   .menu__responsive nav .nav-item a:hover {
     border-bottom: solid 1px tomato;
     transition: all .3s ease-in-out; }
+
+@media screen and (max-width: 768px) {
+  .menu__responsive nav ul {
+    font-size: 2em; } }
 
 /*fin header*/
 /*inicio footer*/
@@ -110,7 +114,8 @@ footer {
 /*home*/
 main {
   margin-bottom: 2rem;
-  margin-top: 1rem; }
+  margin-top: 1rem;
+  /*aplicando extend*/ }
   main .cotizar {
     display: flex;
     flex-direction: column;
@@ -118,10 +123,9 @@ main {
     align-items: center;
     height: 100%;
     width: 100%;
-    background-color: aqua;
     border: solid 1px #808080;
     background: linear-gradient(to right, #00c6ff, #0072ff); }
-    main .cotizar__subtitulo {
+    main .cotizar__subtitulo, main .cotizar__h3 {
       font-size: 2.5em;
       text-align: center;
       font-family: "Montserrat", sans-serif; }
@@ -153,7 +157,10 @@ main {
       font-family: "Roboto", sans-serif; }
   main .cotizar__seccion {
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
+    align-items: flex-start;
+    gap: 0rem;
     margin-top: 1rem; }
     main .cotizar__seccion .cotizar__article {
       width: 350px; }
@@ -165,9 +172,7 @@ main {
     main .cotizar__seccion .cotizar__img {
       border-radius: 100px; }
   main .cotizar__h3 {
-    text-align: center;
-    font-size: 2em;
-    font-family: "Montserrat", sans-serif; }
+    text-decoration: underline; }
   main .contactos {
     background-image: url(../img/fondogris.jpg);
     background-size: cover;
@@ -175,14 +180,19 @@ main {
     height: 400px;
     width: 100%; }
     main .contactos__contenedor {
-      height: 100%;
-      width: 100%;
       display: flex;
+      flex-direction: row;
+      justify-content: space-around;
       align-items: center;
-      justify-content: space-around; }
+      gap: 0rem;
+      height: 100%;
+      width: 100%; }
     main .contactos__redes {
       display: flex;
+      flex-direction: row;
       justify-content: space-between;
+      align-items: flex-start;
+      gap: 0rem;
       padding-left: 0rem;
       list-style-type: none;
       width: 80%; }
@@ -192,6 +202,7 @@ main {
     main .contactos__div {
       display: flex;
       flex-direction: column;
+      justify-content: flex-start;
       align-items: center;
       gap: 2rem;
       border: solid 1px #000000; }
@@ -224,11 +235,14 @@ main {
   .menu__responsive nav .menu__titulo {
     font-size: 1.7em;
     color: #0c0b0b; }
-  .contactos__contenedor {
+  main .contactos__contenedor {
     height: 100%;
     width: 100%;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0rem; }
   main .fondo {
     background-image: url(../img/fondocascos.jpg);
     height: 380px;
@@ -236,6 +250,8 @@ main {
     main .fondo__titulo {
       font-size: 2.5em;
       font-family: "Roboto", sans-serif; }
+  main .contactos__titulo {
+    font-size: 2.5em; }
   main .cotizar__seccion .cotizar__img {
     width: 240px;
     height: 210px; }
@@ -243,7 +259,7 @@ main {
     width: 50%; }
     main .cotizar__seccion .cotizar__article .cotizar__nosotros {
       font-size: 1.7em; }
-  main .cotizar__subtitulo {
+  main .cotizar__subtitulo, main .cotizar__h3 {
     font-size: 2.5em; }
   /*fin index*/ }
 
@@ -265,7 +281,7 @@ main {
     height: 300px;
     background-position: center bottom;
     margin-top: 1rem; }
-  main .cotizar__subtitulo {
+  main .cotizar__subtitulo, main .cotizar__h3 {
     font-size: 2em; }
   main .cotizar__seccion {
     flex-direction: column;
@@ -297,7 +313,7 @@ main {
   .contacto__parrafo {
     font-size: 1.2em;
     font-family: "Montserrat", sans-serif; }
-  main .cotizar__subtitulo {
+  main .cotizar__subtitulo, main .cotizar__h3 {
     font-size: 1.7em;
     text-align: center; }
   main .cotizar__parrafo {
@@ -332,7 +348,7 @@ main {
     height: 230px;
     background-position: center bottom;
     margin-top: 0rem; }
-  main .cotizar__subtitulo {
+  main .cotizar__subtitulo, main .cotizar__h3 {
     font-size: 1.7em;
     text-align: center; }
   main .cotizar__parrafo {

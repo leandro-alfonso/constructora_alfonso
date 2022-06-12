@@ -1,7 +1,7 @@
 /*inicio footer*/
 footer {
     display: flex;
-    background-color: $footer;
+    background-color: map-get($colors, footer);
     justify-content: space-around;
 
     .footer__section {

@@ -1,5 +1,11 @@
     /*color*/
-    $footer: #ff7f50; 
+    $colors: (
+        primary: #000000,
+        hover:aliceblue,
+        text-background:#ffffff9e,
+        borde:#808080,
+        footer: #ff7f50,
+    );
 
     /*font-family*/
     $font-titulo:'Roboto', sans-serif;

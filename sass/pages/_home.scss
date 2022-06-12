@@ -9,8 +9,7 @@ main {
         align-items: center;
         height: 100%;
         width: 100%;
-        background-color: aqua;
-        border: solid 1px #808080;
+        border: solid 1px map-get($colors, borde);
         background: linear-gradient(to right, #00c6ff, #0072ff);
         
         &__subtitulo {
@@ -25,13 +24,13 @@ main {
         }
         &__presupuesto {
             font-size: $text-parrafo;
-            color: #000000;
+            color: map-get($colors, primary);
             border: solid 1px;
             padding: 0.2rem;
             text-decoration: none;
         }
         &__presupuesto:hover {
-            color: aliceblue;
+            color: map-get($colors, hover);
         }
         
     }
@@ -46,15 +45,14 @@ main {
             justify-content: space-around;
         }
         &__titulo {
-            background-color: #ffffff9e;
+            background-color: map-get($colors, text-background);
             border-radius: 15px;
             font-size: $text-titulo;
             font-family: $font-titulo;
         }
     }
     .cotizar__seccion {
-        display: flex;
-        justify-content: space-around;
+        @include flex (row, space-around, flex-start, 0rem);
         margin-top: 1rem;
 
         .cotizar__article {
@@ -72,10 +70,10 @@ main {
         }
 
     }
+    /*aplicando extend*/
     .cotizar__h3 {
-        text-align: center;
-        font-size: $text-parrafo;
-        font-family:$font-subtitulo;
+        @extend .cotizar__subtitulo;
+        text-decoration: underline;
     }
     .contactos {
         background-image: url(../img/fondogris.jpg);
@@ -84,15 +82,12 @@ main {
         height: 400px;
         width: 100%;   
         &__contenedor {
+            @include flex (row, space-around, center, 0rem);
             height: 100%;
             width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
         }
         &__redes {
-            display: flex;
-            justify-content: space-between;
+            @include flex (row, space-between, flex-start, 0rem);
             padding-left: 0rem;
             list-style-type: none;
             width: 80%;
@@ -103,11 +98,8 @@ main {
         }
         
         &__div {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 2rem;
-            border: solid 1px #000000;
+            @include flex (column, flex-start, center, 2rem);
+            border: solid 1px map-get($colors, primary);
         }
     }
     .logo {
@@ -152,11 +144,10 @@ main {
         font-size: 1.7em;
         color: #0c0b0b;
     }
-    .contactos__contenedor {
+    main .contactos__contenedor {
         height: 100%;
         width: 100%;
-        display: flex;
-        flex-direction: column;
+        @include flex (column, space-around, center, 0rem);
     }
     main .fondo {
         background-image: url(../img/fondocascos.jpg);
@@ -167,6 +158,10 @@ main {
         font-size: 2.5em;
         font-family: $font-titulo;
     }
+    }
+
+    main .contactos__titulo {
+        font-size: $text-subtitulo;
     }
 
     main .cotizar__seccion .cotizar__img {

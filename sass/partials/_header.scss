@@ -20,7 +20,7 @@
         gap: 1rem;
         width: 100%;
         justify-content: flex-end;
-        font-size: $text-parrafo;
+        font-size: $text-subtitulo;
         font-family: $font-nav;
         
         li {
@@ -35,6 +35,12 @@
     .nav-item a:hover {
         border-bottom: solid 1px tomato;
         transition: all .3s ease-in-out;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu__responsive nav ul {
+        font-size: $text-parrafo;
     }
 }
 /*fin header*/

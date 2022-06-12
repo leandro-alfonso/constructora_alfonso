@@ -8,7 +8,7 @@
     text-align: center;
     font-size: $text-titulo;
     font-family: $font-titulo;
-    background-color: #ffffff9e;
+    background-color:  map-get($colors, text-background);
     border-radius: 15px;
 }
 .contacto__subtitulo {

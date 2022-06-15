@@ -3,10 +3,7 @@ main {
     margin-bottom: 2rem;
     margin-top: 1rem;
     .cotizar {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include flex (column, center, center, 0rem);
         height: 100%;
         width: 100%;
         border: solid 1px map-get($colors, borde);
@@ -36,7 +33,7 @@ main {
     }
     .fondo {
         background-image: url(../img/fondocascos.jpg);
-        height: 600px;
+        height: 800px;
         background-size: cover;
         background-position: center bottom;
         margin-top: 1rem;
@@ -63,6 +60,7 @@ main {
                 text-align: center;
                 font-size: $text-parrafo;
                 font-family: $font-parrafo;
+                color: #023355;
             }
         }
         .cotizar__img {
@@ -96,11 +94,16 @@ main {
             font-size: $text-titulo;
             font-family: $font-titulo;
         }
-        
+
         &__div {
             @include flex (column, flex-start, center, 2rem);
             border: solid 1px map-get($colors, primary);
         }
+
+        .contacto__parrafo {
+            font-size: $text-small;
+            font-family: $font-parrafo;
+        } 
     }
     .logo {
         width: 100px;
@@ -129,7 +132,7 @@ main {
     }
     }
  
-    .contactos__contenedor {
+    main .contactos__contenedor {
         height: 100%;
         width: 100%;
         display: flex;
@@ -173,7 +176,7 @@ main {
         width: 50%;
 
         & .cotizar__nosotros {
-            font-size: 1.7em;
+            font-size: 1.6em;
         }
     }
     main .cotizar__subtitulo {
@@ -250,9 +253,9 @@ main {
         font-size: 2em;
         font-family: $font-titulo;
     }
-    .contacto__parrafo {
+    main .contactos .contacto__parrafo {
         font-size: 1.2em;
-        font-family: $font-subtitulo;
+        font-family: $font-parrafo;
     } 
     main .cotizar__subtitulo {
         font-size: 1.7em;

@@ -10,72 +10,69 @@ picture img {
     height: 600px;
     margin-top: 1rem;
     margin-bottom: 2rem;
-}
-
-.fondo__article {
-    display: flex;
-    justify-content: space-around;
+    .fondo__article {
+        @include flex (row, space-around, flex-start, 0rem);
+        .trabajos__titulo {
+            text-align: center;
+            font-size: $text-titulo;
+            font-family: $font-titulo;
+            background-color: map-get($colors, text-background);
+            border-radius: 15px;
+        }
+    }
 }
 
 .main__trabajos {
     margin: 0 auto;
     max-width: 1200px;
-}
-.trabajos__img {
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 20px;
-}
-.trabajos__picture:nth-of-type(1) {
-    grid-column: 1 / 4;
-}
-.trabajos__picture:nth-of-type(2) {
-    grid-column: 4 / 7;
-}
-.trabajos__picture:nth-of-type(3) {
-    grid-column: 7 / 10;
-}
-.trabajos__picture:nth-of-type(4) {
-    grid-column: 1 / 4;
-    grid-row: 2;
-}
-.trabajos__picture:nth-of-type(5) {
-    grid-column: 4 / 7;
-    grid-row: 2;
-}
-.trabajos__picture:nth-of-type(6) {
-    grid-column: 7 / 10;
-    grid-row: 2;
-}
-.trabajos__picture:nth-of-type(7) {
-    grid-column: 1 / 4;
-    grid-row: 3;
-}
-.trabajos__picture:nth-of-type(8) {
-    grid-column: 4 / 7;
-    grid-row: 3;
-}
-.trabajos__picture:nth-of-type(9) {
-    grid-column: 7 / 10;
-    grid-row: 3;
+    .trabajos__img {
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 20px;
+        .trabajos__picture:nth-of-type(1) {
+            grid-column: 1 / 4;
+        }
+        .trabajos__picture:nth-of-type(2) {
+            grid-column: 4 / 7;
+        }
+        .trabajos__picture:nth-of-type(3) {
+            grid-column: 7 / 10;
+        }
+        .trabajos__picture:nth-of-type(4) {
+            grid-column: 1 / 4;
+            grid-row: 2;
+        }
+        .trabajos__picture:nth-of-type(5) {
+            grid-column: 4 / 7;
+            grid-row: 2;
+        }
+        .trabajos__picture:nth-of-type(6) {
+            grid-column: 7 / 10;
+            grid-row: 2;
+        }
+        .trabajos__picture:nth-of-type(7) {
+            grid-column: 1 / 4;
+            grid-row: 3;
+        }
+        .trabajos__picture:nth-of-type(8) {
+            grid-column: 4 / 7;
+            grid-row: 3;
+        }
+        .trabajos__picture:nth-of-type(9) {
+            grid-column: 7 / 10;
+            grid-row: 3;
+        }
+    }
+    .trabajos__parrafo {
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+        text-align: center;
+        font-size: $text-parrafo;
+        font-family: $font-parrafo;
+    }
 }
 
-.trabajos__titulo {
-    text-align: center;
-    font-size: $text-titulo;
-    font-family: $font-titulo;
-    background-color: map-get($colors, text-background);
-    border-radius: 15px;
-}
-
-.trabajos__parrafo {
-    margin-top: 2rem;
-    margin-bottom: 3rem;
-    text-align: center;
-    font-size: $text-parrafo;
-    font-family: $font-parrafo;
-}
 /*fin trabajos*/
 
 @media screen and (max-width:1024px) {
@@ -86,13 +83,14 @@ picture img {
         background-position: center bottom;
         height: 500px;
         margin-bottom: 2rem;
+        .fondo__article .trabajos__titulo {
+            text-align: center;
+            font-size: 3em;
+            font-family:'Montserrat', sans-serif;
+        }
     }
-    .trabajos__titulo {
-        text-align: center;
-        font-size: 3em;
-        font-family:'Montserrat', sans-serif;
-    }
-    .trabajos__parrafo {
+
+    .main__trabajos .trabajos__parrafo {
         margin-top: 1rem;
         margin-bottom: 1rem;
         text-align: center;
@@ -107,6 +105,54 @@ picture img {
     .main__trabajos {
         margin: 0 auto;
         max-width: 600px;
+        .trabajos__img {
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            gap: 20px;
+            .trabajos__picture:nth-of-type(1) {
+                grid-column: 1 / 6;
+            }
+            .trabajos__picture:nth-of-type(2) {
+                grid-column: 6 / 10;
+            }
+            .trabajos__picture:nth-of-type(3) {
+                grid-column: 1 / 6;
+                grid-row: 2;
+            }
+            .trabajos__picture:nth-of-type(4) {
+                grid-column: 6 / 10;
+                grid-row: 2;
+            }
+            .trabajos__picture:nth-of-type(5) {
+                grid-column: 1 / 6;
+                grid-row: 3;
+            }
+            .trabajos__picture:nth-of-type(6) {
+                grid-column: 6 / 10;
+                grid-row: 3;
+            }
+            .trabajos__picture:nth-of-type(7) {
+                grid-column: 1 / 6;
+                grid-row: 4;
+            }
+            .trabajos__picture:nth-of-type(8) {
+                grid-column: 6 / 10;
+                grid-row: 4;
+            }
+            .trabajos__picture:nth-of-type(9) {
+                grid-column: 4 / 8;
+                grid-row: 5;
+            }
+            .trabajos__parrafo {
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                text-align: center;
+                font-size: 1.5em;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            /*fin trabajos*/
+        }
     }
     .trabajos {
         background-image: url(../img/trabajo.jpg);
@@ -114,60 +160,13 @@ picture img {
         background-position: center bottom;
         height: 400px;
         margin-bottom: 2rem;
+        .fondo__article .trabajos__titulo {
+            text-align: center;
+            font-size: 2.7em;
+            font-family:'Montserrat', sans-serif;
+        }
     }
-    .trabajos__titulo {
-        text-align: center;
-        font-size: 2.7em;
-        font-family:'Montserrat', sans-serif;
-    }
-    .trabajos__img {
-        display: grid;
-        grid-template-columns: repeat(9, 1fr);
-        grid-template-rows: repeat(5, 1fr);
-        gap: 20px;
-    }
-    .trabajos__picture:nth-of-type(1) {
-        grid-column: 1 / 6;
-    }
-    .trabajos__picture:nth-of-type(2) {
-        grid-column: 6 / 10;
-    }
-    .trabajos__picture:nth-of-type(3) {
-        grid-column: 1 / 6;
-        grid-row: 2;
-    }
-    .trabajos__picture:nth-of-type(4) {
-        grid-column: 6 / 10;
-        grid-row: 2;
-    }
-    .trabajos__picture:nth-of-type(5) {
-        grid-column: 1 / 6;
-        grid-row: 3;
-    }
-    .trabajos__picture:nth-of-type(6) {
-        grid-column: 6 / 10;
-        grid-row: 3;
-    }
-    .trabajos__picture:nth-of-type(7) {
-        grid-column: 1 / 6;
-        grid-row: 4;
-    }
-    .trabajos__picture:nth-of-type(8) {
-        grid-column: 6 / 10;
-        grid-row: 4;
-    }
-    .trabajos__picture:nth-of-type(9) {
-        grid-column: 4 / 8;
-        grid-row: 5;
-    }
-    .trabajos__parrafo {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        text-align: center;
-        font-size: 1.5em;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    /*fin trabajos*/
+
 }
 
 @media screen and (max-width: 600px){
@@ -186,6 +185,54 @@ picture img {
     .main__trabajos {
         margin: 0 auto;
         max-width: 300px;
+        .trabajos__img {
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+            grid-template-rows: repeat(9, 1fr);
+            gap: 20px;
+            .trabajos__picture:nth-of-type(1) {
+                grid-column: 1 / 10;
+            }
+            .trabajos__picture:nth-of-type(2) {
+                grid-column: 1 / 10;
+                grid-row: 2;
+            }
+            .trabajos__picture:nth-of-type(3) {
+                grid-column: 1 / 10;
+                grid-row: 3;
+            }
+            .trabajos__picture:nth-of-type(4) {
+                grid-column: 1 / 10;
+                grid-row: 4;
+            }
+            .trabajos__picture:nth-of-type(5) {
+                grid-column: 1 / 10;
+                grid-row: 5;
+            }
+            .trabajos__picture:nth-of-type(6) {
+                grid-column: 1 / 10;
+                grid-row: 6;
+            }
+            .trabajos__picture:nth-of-type(7) {
+                grid-column: 1 / 10;
+                grid-row: 7;
+            }
+            .trabajos__picture:nth-of-type(8) {
+                grid-column: 1 / 10;
+                grid-row: 8;
+            }
+            .trabajos__picture:nth-of-type(9) {
+                grid-column: 1 / 10;
+                grid-row: 9;
+            }
+        }
+        .trabajos__parrafo {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            font-size: 1.3em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
     }
     .trabajos {
         background-image: url(../img/trabajo.jpg);
@@ -193,60 +240,13 @@ picture img {
         background-position: center bottom;
         height: 250px;
         margin-bottom: 2rem;
+        .fondo__article .trabajos__titulo {
+            text-align: center;
+            font-size: 2.4em;
+            font-family:'Montserrat', sans-serif;
+        }
     }
-    .trabajos__titulo {
-        text-align: center;
-        font-size: 2.4em;
-        font-family:'Montserrat', sans-serif;
-    }
-    .trabajos__img {
-        display: grid;
-        grid-template-columns: repeat(9, 1fr);
-        grid-template-rows: repeat(9, 1fr);
-        gap: 20px;
-    }
-    .trabajos__picture:nth-of-type(1) {
-        grid-column: 1 / 10;
-    }
-    .trabajos__picture:nth-of-type(2) {
-        grid-column: 1 / 10;
-        grid-row: 2;
-    }
-    .trabajos__picture:nth-of-type(3) {
-        grid-column: 1 / 10;
-        grid-row: 3;
-    }
-    .trabajos__picture:nth-of-type(4) {
-        grid-column: 1 / 10;
-        grid-row: 4;
-    }
-    .trabajos__picture:nth-of-type(5) {
-        grid-column: 1 / 10;
-        grid-row: 5;
-    }
-    .trabajos__picture:nth-of-type(6) {
-        grid-column: 1 / 10;
-        grid-row: 6;
-    }
-    .trabajos__picture:nth-of-type(7) {
-        grid-column: 1 / 10;
-        grid-row: 7;
-    }
-    .trabajos__picture:nth-of-type(8) {
-        grid-column: 1 / 10;
-        grid-row: 8;
-    }
-    .trabajos__picture:nth-of-type(9) {
-        grid-column: 1 / 10;
-        grid-row: 9;
-    }
-    .trabajos__parrafo {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        text-align: center;
-        font-size: 1.3em;
-        font-family: Arial, Helvetica, sans-serif;
-    }
+
     /*fin trabajos*/
 }
 @media screen and (max-width: 320px){

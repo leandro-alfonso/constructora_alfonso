@@ -17,10 +17,13 @@
 }
 .contenedor__div {
     margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-around;
     .presupuesto__parrafo {
         text-align: center;
         font-size: $text-parrafo;
         font-family: $font-parrafo;
+        width: 50%;
     }
 }
 
@@ -33,6 +36,8 @@
         width: 50%;
         border: solid 1px map-get($colors, borde);
         font-size: $text-parrafo;
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        border-radius: 10px;
         .presupuesto__radio {
             @include flex (column, flex-start, center, 1rem);
             width: 30%;
@@ -80,6 +85,7 @@
     }
     .contenedor__div .presupuesto__parrafo  {
         font-size: 1.7em;
+        width: 80%;
     }
     /*fin presupuesto*/
 }

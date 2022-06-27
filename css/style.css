@@ -158,23 +158,47 @@ main {
       font-family: "Roboto", sans-serif; }
   main .cotizar__seccion {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: center;
     gap: 0rem;
     margin-top: 1rem; }
     main .cotizar__seccion .cotizar__article {
-      width: 350px; }
+      width: 70%;
+      margin-bottom: 3rem;
+      background: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18); }
       main .cotizar__seccion .cotizar__article .cotizar__nosotros {
         margin: 1rem;
         text-align: center;
-        font-size: 2em;
+        font-size: 2.5em;
         font-family: Arial, Helvetica, sans-serif;
         color: #023355; }
-    main .cotizar__seccion .cotizar__img {
-      border-radius: 100px; }
+    main .cotizar__seccion .cotizar__contendor {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: stretch;
+      gap: 0rem;
+      width: 90%;
+      margin-bottom: 4rem; }
+      main .cotizar__seccion .cotizar__contendor .cotizar__div {
+        text-align: center;
+        background: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 8px 22px 0 rgba(31, 38, 135, 0.37);
+        border-radius: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        padding-top: 2rem; }
+        main .cotizar__seccion .cotizar__contendor .cotizar__div .cotizar__img {
+          border-radius: 100px; }
+        main .cotizar__seccion .cotizar__contendor .cotizar__div .parrafos__img {
+          font-size: 3.4em;
+          font-family: "Roboto", sans-serif; }
   main .cotizar__h3 {
-    text-decoration: underline; }
+    text-decoration: underline;
+    margin-bottom: 2rem; }
   main .contactos {
     background-image: url(../img/fondogris.jpg);
     background-size: cover;
@@ -207,7 +231,10 @@ main {
       justify-content: flex-start;
       align-items: center;
       gap: 2rem;
-      border: solid 1px #000000; }
+      border: solid 1px #000000;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18); }
     main .contactos .contacto__parrafo {
       font-size: 1.5em;
       font-family: Arial, Helvetica, sans-serif; }
@@ -228,11 +255,17 @@ main {
       text-align: center;
       font-size: 3em;
       font-family: "Roboto", sans-serif; }
+  .cotizar__img {
+    width: 90%; }
+  main .cotizar__seccion .cotizar__contendor {
+    gap: 2rem; }
   main .contactos__contenedor {
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: row; }
+  main .cotizar__seccion .cotizar__article .cotizar__nosotros {
+    font-size: 2em; }
   /*fin index*/ }
 
 @media screen and (max-width: 768px) {
@@ -257,13 +290,14 @@ main {
       font-family: "Roboto", sans-serif; }
   main .contactos__titulo {
     font-size: 2.5em; }
-  main .cotizar__seccion .cotizar__img {
-    width: 240px;
-    height: 210px; }
   main .cotizar__seccion .cotizar__article {
-    width: 50%; }
+    width: 50%;
+    margin-bottom: 2rem; }
     main .cotizar__seccion .cotizar__article .cotizar__nosotros {
       font-size: 1.6em; }
+  main .cotizar__seccion .cotizar__contendor .cotizar__div .parrafos__img {
+    font-size: 2.5em;
+    font-family: Arial, Helvetica, sans-serif; }
   main .cotizar__subtitulo, main .cotizar__h3 {
     font-size: 2.5em; }
   /*fin index*/ }
@@ -293,6 +327,11 @@ main {
     align-items: center; }
     main .cotizar__seccion .cotizar__article {
       width: 100%; }
+    main .cotizar__seccion .cotizar__contendor {
+      flex-direction: column;
+      width: 60%; }
+      main .cotizar__seccion .cotizar__contendor .cotizar__img {
+        width: 70%; }
   /*fin index*/ }
 
 @media screen and (max-width: 480px) {
@@ -331,9 +370,11 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 1rem; }
-    main .cotizar__seccion .cotizar__img {
-      width: 180px;
-      height: 110px; }
+    main .cotizar__seccion .cotizar__contendor .cotizar__div .cotizar__img {
+      width: 90%;
+      border-radius: 40px; }
+    main .cotizar__seccion .cotizar__contendor .cotizar__div .parrafos__img {
+      font-size: 2em; }
     main .cotizar__seccion .cotizar__article {
       width: 90%;
       border: solid 1px; }
@@ -342,6 +383,8 @@ main {
       text-align: center;
       font-size: 1.6em;
       font-family: Arial, Helvetica, sans-serif; }
+    main .cotizar__seccion .cotizar__contendor {
+      width: 70%; }
   /*fin index*/ }
 
 @media screen and (max-width: 320px) {
@@ -478,11 +521,12 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
-    gap: 0rem;
+    align-items: stretch;
+    gap: 1rem;
     font-size: 2em;
     border: solid 1px;
-    padding: 1rem; }
+    padding: 1rem;
+    border-radius: 10px; }
   .contacto__sections .contacto__datos {
     display: flex;
     flex-direction: column;
@@ -490,7 +534,8 @@ main {
     align-items: center;
     gap: 1rem;
     border: solid 1px;
-    padding: 1rem; }
+    padding: 1rem;
+    border-radius: 10px; }
     .contacto__sections .contacto__datos .contacto__sub {
       font-size: 2.5em;
       font-family: "Montserrat", sans-serif; }
@@ -656,11 +701,14 @@ main {
   font-size: 1em; }
 
 .contenedor__div {
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-around; }
   .contenedor__div .presupuesto__parrafo {
     text-align: center;
     font-size: 2em;
-    font-family: Arial, Helvetica, sans-serif; }
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50%; }
 
 .presupuesto {
   display: flex;
@@ -678,7 +726,9 @@ main {
     padding: 0.5rem;
     width: 50%;
     border: solid 1px #808080;
-    font-size: 2em; }
+    font-size: 2em;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border-radius: 10px; }
     .presupuesto .form .presupuesto__radio {
       display: flex;
       flex-direction: column;
@@ -718,7 +768,8 @@ main {
     width: 50%;
     gap: 0.6rem; }
   .contenedor__div .presupuesto__parrafo {
-    font-size: 1.7em; }
+    font-size: 1.7em;
+    width: 80%; }
   /*fin presupuesto*/ }
 
 @media screen and (max-width: 600px) {

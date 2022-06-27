@@ -49,29 +49,53 @@ main {
         }
     }
     .cotizar__seccion {
-        @include flex (row, space-around, flex-start, 0rem);
+        @include flex (column, space-around, center, 0rem);
         margin-top: 1rem;
 
         .cotizar__article {
-            width: 350px;
+            width: 70%;
+            margin-bottom: 3rem;
+            background: rgba( 255, 255, 255, 0.25 );
+            box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.60 );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
 
             .cotizar__nosotros {
                 margin: 1rem;
                 text-align: center;
-                font-size: $text-parrafo;
+                font-size: $text-subtitulo;
                 font-family: $font-parrafo;
                 color: #023355;
             }
         }
-        .cotizar__img {
-            border-radius: 100px;
-        }
+        .cotizar__contendor {
+            @include flex (row, space-around, stretch, 0rem);
+            width: 90%;
+            margin-bottom: 4rem;
+            .cotizar__div {
+                text-align: center;
+                background: rgba( 255, 255, 255, 0.25 );
+                box-shadow: 0 8px 22px 0 rgba( 31, 38, 135, 0.37 );
+                border-radius: 30px;
+                border: 1px solid rgba( 255, 255, 255, 0.18 );
+                padding-top: 2rem;
+                .cotizar__img {
+                    border-radius: 100px;
+                }
+                .parrafos__img {
+                    font-size: $text-titulo;
+                    font-family: $font-titulo;
+                }
+            }
 
+        }
+        
     }
     /*aplicando extend*/
     .cotizar__h3 {
         @extend .cotizar__subtitulo;
         text-decoration: underline;
+        margin-bottom: 2rem;
     }
     .contactos {
         background-image: url(../img/fondogris.jpg);
@@ -98,6 +122,9 @@ main {
         &__div {
             @include flex (column, flex-start, center, 2rem);
             border: solid 1px map-get($colors, primary);
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
         }
 
         .contacto__parrafo {
@@ -131,12 +158,21 @@ main {
         font-family: $font-titulo;
     }
     }
+    .cotizar__img {
+        width: 90%;
+    }
+    main .cotizar__seccion .cotizar__contendor {
+        gap: 2rem;
+    }
  
     main .contactos__contenedor {
         height: 100%;
         width: 100%;
         display: flex;
         flex-direction: row;
+    }
+    main .cotizar__seccion .cotizar__article .cotizar__nosotros {
+        font-size: 2em;
     }
     /*fin index*/
 }
@@ -167,17 +203,17 @@ main {
         font-size: $text-subtitulo;
     }
 
-    main .cotizar__seccion .cotizar__img {
-        width: 240px;
-        height: 210px;
-    }
-
     main .cotizar__seccion .cotizar__article {
         width: 50%;
+        margin-bottom: 2rem;
 
         & .cotizar__nosotros {
             font-size: 1.6em;
         }
+    }
+    main .cotizar__seccion .cotizar__contendor .cotizar__div .parrafos__img {
+        font-size: $text-subtitulo;
+        font-family: $font-parrafo;
     }
     main .cotizar__subtitulo {
         font-size: 2.5em;
@@ -219,6 +255,13 @@ main {
 
         & .cotizar__article {
             width: 100%;
+        }
+        & .cotizar__contendor {
+            flex-direction: column;
+            width: 60%;
+            & .cotizar__img {
+                width: 70%;
+            }
         }
     }
     
@@ -275,9 +318,13 @@ main {
         align-items: center;
         gap: 1rem;
 
-        & .cotizar__img {
-            width: 180px;
-            height: 110px;
+        & .cotizar__contendor .cotizar__div .cotizar__img{
+            width: 90%;
+            border-radius: 40px;
+        }
+
+        .cotizar__contendor .cotizar__div .parrafos__img {
+            font-size: $text-parrafo;    
         }
 
         & .cotizar__article {
@@ -290,6 +337,9 @@ main {
             text-align: center;
             font-size: 1.6em;
             font-family: $font-parrafo;
+        }
+        & .cotizar__contendor {
+            width: 70%;
         }
     }
  
